@@ -1,13 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Modal from './Modal.jsx'
 
-const Player = ({el}) => {
+const PLayer = ({el}) => {
+    const [show, setshow] = useState(false)
   return (
-    <div className='card'>
-      <img src={el.image} alt="" />
-      <h1>{el.name}</h1>
-      <h3>{el.nationality}</h3>
+    <div className='caracter'>
+        {show?<Modal el={el} setshow={setshow}/>:null}
+        <img src={el.poster} onClick={()=>setshow(true)} />
     </div>
   )
 }
 
-export default Player
+export default PLayer

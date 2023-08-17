@@ -1,11 +1,12 @@
 import React from 'react'
-import Player from './PLayer'
-const Playerslist = ({playerslist}) => {
+import Player from './PLayer.jsx'
+
+const PlayersList = ({players}) => {
   return (
-    <div className='container'>
-      {playerslist.map(el=><Player el={el}/>)}
+    <div className='caracterlist'>
+      {players.map(el=><Player el={el}/>)}
     </div>
   )
 }
 
-export default Playerslist
+export default PlayersList
